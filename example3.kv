@@ -1,0 +1,31 @@
+<Example3>
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 20
+        spacing: 10
+
+        BoxLayout:
+            id: box
+            size_hint_y: .8
+            pos_hint: {'top': 1}
+
+        BoxLayout:
+            size_hint_y: .2
+            pos_hint: {'top': 1}
+            Button:
+                id: start_button
+                text: 'Start'
+                font_size: 32
+                on_release: root.start()
+                disabled: False
+
+            Button:
+                text: 'Stop'
+                font_size: 32
+                on_release: root.stop()
+
+            Button:
+                text: 'Clear'
+                font_size: 32
+                on_release: root.clear_plot()
